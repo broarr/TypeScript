@@ -1,0 +1,60 @@
+//// [tests/cases/compiler/commentOnArrayElement17.ts] ////
+
+=== commentOnArrayElement17.ts ===
+const arr1 = [
+>arr1 : number[]
+>[    1, //first    2, //second    3 //third] : number[]
+
+    1, //first
+>1 : 1
+
+    2, //second
+>2 : 2
+
+    3 //third
+>3 : 3
+
+]
+
+const arr1WithTrailingComma = [
+>arr1WithTrailingComma : number[]
+>[    1, //first    2, //second    3, //third] : number[]
+
+    1, //first
+>1 : 1
+
+    2, //second
+>2 : 2
+
+    3, //third
+>3 : 3
+
+]
+
+const arr2 = [
+>arr2 : number[]
+>[    1, /*first*/    2, /*second*/    3 /*third*/] : number[]
+
+    1, /*first*/
+>1 : 1
+
+    2, /*second*/
+>2 : 2
+
+    3 /*third*/
+>3 : 3
+
+]
+
+const arr3 = [1/*first*/,2/*second*/]
+>arr3 : number[]
+>[1/*first*/,2/*second*/] : number[]
+>1 : 1
+>2 : 2
+
+const arr4 = [1,/*first*/ 2/*second*/]
+>arr4 : number[]
+>[1,/*first*/ 2/*second*/] : number[]
+>1 : 1
+>2 : 2
+

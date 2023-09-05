@@ -1,0 +1,33 @@
+//// [tests/cases/compiler/commentOnArrayElement17.ts] ////
+
+=== commentOnArrayElement17.ts ===
+const arr1 = [
+>arr1 : Symbol(arr1, Decl(commentOnArrayElement17.ts, 0, 5))
+
+    1, //first
+    2, //second
+    3 //third
+]
+
+const arr1WithTrailingComma = [
+>arr1WithTrailingComma : Symbol(arr1WithTrailingComma, Decl(commentOnArrayElement17.ts, 6, 5))
+
+    1, //first
+    2, //second
+    3, //third
+]
+
+const arr2 = [
+>arr2 : Symbol(arr2, Decl(commentOnArrayElement17.ts, 12, 5))
+
+    1, /*first*/
+    2, /*second*/
+    3 /*third*/
+]
+
+const arr3 = [1/*first*/,2/*second*/]
+>arr3 : Symbol(arr3, Decl(commentOnArrayElement17.ts, 18, 5))
+
+const arr4 = [1,/*first*/ 2/*second*/]
+>arr4 : Symbol(arr4, Decl(commentOnArrayElement17.ts, 20, 5))
+
